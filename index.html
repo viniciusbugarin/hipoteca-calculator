@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador Hipoteca España</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calcula tu hipoteca: cuota mensual, intereses y coste total.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Simula tu hipoteca en segundos</h1>
+  <p>Calcula cuota mensual, intereses y coste total</p>
+</section>
+
+<section class="calculator">
+
+  <div class="form">
+    <h2>Datos</h2>
+
+    <p id="error" class="error"></p>
+
+    <label>Precio vivienda (€)</label>
+    <input type="number" id="price" placeholder="Ej: 200000">
+
+    <label>Entrada (€)</label>
+    <input type="number" id="entry" placeholder="Ej: 40000">
+
+    <label>Interés (%)</label>
+    <input type="number" id="interest" placeholder="Ej: 3">
+
+    <label>Años</label>
+    <input type="number" id="years" placeholder="Ej: 30">
+
+    <button id="calc-btn" onclick="calculate()">Calcular hipoteca</button>
+  </div>
+
+  <div class="results" id="results">
+
+    <div class="result-box">
+      <h3>🏠 Préstamo</h3>
+      <p id="loan">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>📅 Cuota mensual</h3>
+      <p id="monthly">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>💸 Intereses totales</h3>
+      <p id="interestTotal">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>💰 Coste total</h3>
+      <p id="total">-</p>
+    </div>
+
+  </div>
+
+</section>
+
+<p class="disclaimer">
+*Resultados orientativos basados en cálculo estándar de amortización.
+</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
